@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.roysoft.navigationcomponent.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_viewBalanceFragment"
+            app:destination="@id/viewBalanceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chooseReceiverFragment"
+            app:destination="@id/chooseReceiverFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_viewTranscationFragment"
+            app:destination="@id/viewTranscationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewBalanceFragment"
+        android:name="com.roysoft.navigationcomponent.ui.fragments.ViewBalanceFragment"
+        android:label="fragment_view_balance"
+        tools:layout="@layout/fragment_view_balance" />
+    <fragment
+        android:id="@+id/chooseReceiverFragment"
+        android:name="com.roysoft.navigationcomponent.ui.fragments.ChooseReceiverFragment"
+        android:label="fragment_choose_receiver"
+        tools:layout="@layout/fragment_choose_receiver" />
+    <fragment
+        android:id="@+id/viewTranscationFragment"
+        android:name="com.roysoft.navigationcomponent.ui.fragments.ViewTranscationFragment"
+        android:label="fragment_view_transcation"
+        tools:layout="@layout/fragment_view_transcation" />
+</navigation>
